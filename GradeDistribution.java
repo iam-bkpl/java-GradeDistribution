@@ -32,10 +32,6 @@ public static void main(String[] args) {
     System.out.println("Enter the grades below, ending with a negative number:");
 
     int score;
-    int countA=0;
-    int countB=0;
-    int countC=0;
-    int countD=0;
     score = sc.nextInt();
 
     String starA = "";
@@ -44,16 +40,12 @@ public static void main(String[] args) {
     String starD = "";
     while(score >= 0){
         if(score >= 80){
-            countA++;
             starA += "*";
         }else if(score >= 70 && score <= 79){
-            countB++;
             starB += "*";
         }else if(score >=60 && score <=69){
-            countC++;
             starC+= "*";
         }else if(score >=0 && score <=59){
-            countD++;
             starD+="*";
         }
 
@@ -67,5 +59,8 @@ public static void main(String[] args) {
     System.out.println("70-79 |" + starB);
     System.out.println("60-69 |" +starC);
     System.out.println("0-59 |" +starD);
+    
+    System.out.println("...press enter...");
+    pressEnter = sc.nextLine();
 }
 }
